@@ -1,0 +1,178 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Change font for all text except the title */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f0f5;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #ff99cc;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative; /* Ensure header is relatively positioned */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: 'Montserrat', sans-serif; /* Change font for the title */
+}
+
+/* Logo Styles */
+.logo {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #ffccf3;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff66b3;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: url('images/background2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    animation: fadeInBackground 5s infinite alternate;
+}
+
+@keyframes fadeInBackground {
+    0% { filter: brightness(50%); }
+    100% { filter: brightness(100%); }
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif; /* Change font for the title */
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif; /* Change font for the content */
+}
+
+/* Page Content Styles */
+.content {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h2 {
+    margin-top: 0;
+    color: #ff66b3;
+    font-family: 'Montserrat', sans-serif; /* Change font for the headings */
+}
+
+.content p {
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif; /* Change font for the content */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #ff99cc;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+.fadeIn {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Contact Information Styles */
+.contact-info,
+.location-map,
+.short-message {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+/* Price List Styles */
+.price-list {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.price-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.price-list th,
+.price-list td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Media Query for Mobile */
+@media only screen and (max-width: 600px) {
+    .logo {
+        width: 30px;
+        height: 30px;
+        top: 10px;
+        left: 10px;
+    }
+}
+
+#darkModeToggle {
+    position: absolute;
+    top: 20px; 
+    right: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

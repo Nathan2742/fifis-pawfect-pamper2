@@ -176,3 +176,12 @@ footer {
     border: none;
     cursor: pointer;
 }
+
+footer {
+    background-color: #ff99cc; /* Footer background color */
+    color: white; /* Footer text color */
+    text-align: center; /* Center-align the content */
+    padding: 20px; /* Add padding for better appearance */
+    opacity: 0; /* Initially set opacity to 0 */
+    animation: fadeIn 2s ease-in-out forwards; /* Apply fade-in animation */
+}

@@ -22,6 +22,23 @@
             color: #ff3385; /* Darker pink color on hover */
         }
     </style>
+        <style>
+            /* Add CSS animations here */
+            @keyframes fadeIn {
+                0% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+        
+            /* Apply animation to header and navigation */
+            header, nav {
+                animation: fadeIn 1s ease-in-out;
+            }
+        
+            /* Apply animation to content with longer duration */
+            .content {
+                animation: fadeIn 4s ease-in-out; /* Adjust the duration here */
+            }
+        </style>
 </head>
 <body>
     <header>

@@ -37,6 +37,12 @@ nav {
     padding: 10px;
 }
 
+.navbar {
+    position: sticky; /* Make the navigation bar sticky */
+    top: 0; /* Stick it to the top of its containing element */
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;

@@ -43,6 +43,31 @@ nav {
     z-index: 1000; /* Ensure it appears above other content */
 }
 
+/* Add active class to highlight current page in navbar */
+.navbar-nav .nav-item .nav-link.active {
+    background-color: #ff66b3; /* Change background color for active item */
+    color: white; /* Change text color for active item */
+    border-radius: 5px; /* Add rounded corners */
+    padding: 8px 16px; /* Add padding */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for smoother color change */
+}
+
+/* Hover effect for nav links */
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: #ff99cc; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+    border-radius: 5px; /* Add rounded corners */
+    padding: 8px 16px; /* Add padding */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for smoother color change */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
 nav ul {
     list-style-type: none;
     margin: 0;

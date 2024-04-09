@@ -50,6 +50,23 @@
             justify-content: center;
             align-items: center;
         }
+         /* Override Bootstrap active class styling */
+        .navbar-nav .nav-item.active .nav-link {
+            background-color: #ff66b3; /* Change background color for active item */
+            color: white; /* Change text color for active item */
+            border-radius: 5px; /* Add rounded corners */
+            padding: 8px 16px; /* Add padding */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for smoother color change */
+        }
+
+        /* Override Bootstrap nav link hover styling */
+        .navbar-nav .nav-item.active .nav-link:hover {
+            background-color: #ff99cc; /* Change background color on hover */
+            color: white; /* Change text color on hover */
+            border-radius: 5px; /* Add rounded corners */
+            padding: 8px 16px; /* Add padding */
+            transition: background-color 0.3s ease, color 0.3s ease; /* Add transition for smoother color change */
+        }
     </style>
 </head>
 <body>

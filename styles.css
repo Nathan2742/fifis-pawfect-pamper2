@@ -217,3 +217,14 @@ footer {
     animation: fadeIn 2s ease-in-out forwards; /* Apply fade-in animation */
 }
 
+/* Styling for number text */
+.numbertext {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    color: #ffffff; /* White text color */
+    font-size: 12px; /* Adjust font size as needed */
+    padding: 4px 8px; /* Adjust padding as needed */
+    border-radius: 5px; /* Rounded corners */
+    position: absolute; /* Position the number text absolutely */
+    top: 8px; /* Adjust top position as needed */
+    left: 8px; /* Adjust left position as needed */
+}

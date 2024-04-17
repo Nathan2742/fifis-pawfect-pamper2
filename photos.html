@@ -306,18 +306,21 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
         var slideIndex = 1;
+        var slideTimer; // Variable to hold the timeout ID
         showSlides(slideIndex);
-
+    
         // Next/previous controls
         function plusSlides(n) {
+            clearTimeout(slideTimer); // Clear the timeout
             showSlides(slideIndex += n);
         }
-
+    
         // Thumbnail image controls
         function currentSlide(n) {
+            clearTimeout(slideTimer); // Clear the timeout
             showSlides(slideIndex = n);
         }
-
+    
         function showSlides(n) {
             var i;
             var slides = document.getElementsByClassName("mySlides");
@@ -332,28 +335,13 @@
             }
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
-        }
-
-        // Automatic slideshow
-        var slideIndexAuto = 0;
-        showSlidesAuto();
-
-        function showSlidesAuto() {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("dot");
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            slideIndexAuto++;
-            if (slideIndexAuto > slides.length) { slideIndexAuto = 1 }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndexAuto - 1].style.display = "block";
-            dots[slideIndexAuto - 1].className += " active";
-            setTimeout(showSlidesAuto, 5000); // Change image every 2 seconds
+            
+            // Set timeout for automatic slideshow
+            slideTimer = setTimeout(function() {
+                plusSlides(1); // Move to the next slide after timeout
+            }, 5000); // Change image every 5 seconds
         }
     </script>
+    
 </body>
 </html>

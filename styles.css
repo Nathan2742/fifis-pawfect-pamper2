@@ -216,3 +216,21 @@ footer {
     opacity: 0; /* Initially set opacity to 0 */
     animation: fadeIn 2s ease-in-out forwards; /* Apply fade-in animation */
 }
+
+/* Apply transition to slides */
+.mySlides {
+    display: none;
+    transition: opacity 0.5s ease;
+    /* Other styles */
+}
+
+/* Show slides */
+.mySlides.fade-in {
+    display: block;
+    opacity: 1;
+}
+
+/* Hide slides */
+.mySlides.fade-out {
+    opacity: 0;
+}

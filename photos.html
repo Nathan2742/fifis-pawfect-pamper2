@@ -139,30 +139,44 @@
             100% { opacity: 1; transform: translateY(0); }
         }
 
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
+    /* Previous and next button styles */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: 60px; /* Adjust the width as needed */
+        height: 40px; /* Adjust the height as needed */
+        margin-top: -20px; /* Half of the height to vertically center */
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 3px;
+        user-select: none;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
+    .next {
+        right: 0;
+        border-radius: 3px;
+    }
 
-        .prev:hover, .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
+    /* Hover effect */
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Bootstrap classes to enhance button appearance */
+    .prev, .next {
+        width: auto;
+        padding: 10px 20px; /* Adjust padding as needed */
+        font-size: 16px; /* Adjust font size as needed */
+    }
 
         /* Caption text */
         .text {

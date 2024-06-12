@@ -409,27 +409,15 @@
         </div>
         <br>
 
-        <!-- <div style="text-align:center">
+        <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
             <span class="dot" onclick="currentSlide(4)"></span>
             <span class="dot" onclick="currentSlide(5)"></span>
-            <span class="dot" onclick="currentSlide(6)"></span>
-            <span class="dot" onclick="currentSlide(7)"></span>
-            <span class="dot" onclick="currentSlide(8)"></span>
-            <span class="dot" onclick="currentSlide(9)"></span>
-            <span class="dot" onclick="currentSlide(10)"></span>
-            <span class="dot" onclick="currentSlide(11)"></span>
-            <span class="dot" onclick="currentSlide(12)"></span>
-            <span class="dot" onclick="currentSlide(13)"></span>
-            <span class="dot" onclick="currentSlide(14)"></span>
-            <span class="dot" onclick="currentSlide(15)"></span>
-            <span class="dot" onclick="currentSlide(16)"></span>
-            <span class="dot" onclick="currentSlide(17)"></span>
-            <span class="dot" onclick="currentSlide(18)"></span>
-            <span class="dot" onclick="currentSlide(19)"></span>
-        </div> -->
+        </div>
+        
+
     </div>
     <footer>
         <p>&copy; 2020 Fifi's Pawfect Pamper. All rights reserved.</p>
@@ -439,22 +427,25 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
+
+
         var slideIndex = 1;
         var slideTimer; // Variable to hold the timeout ID
         showSlides(slideIndex);
-    
+
         // Next/previous controls
         function plusSlides(n) {
             clearTimeout(slideTimer); // Clear the timeout
             showSlides(slideIndex += n);
         }
-    
+
         // Thumbnail image controls
         function currentSlide(n) {
             clearTimeout(slideTimer); // Clear the timeout
-            showSlides(slideIndex = n);
+            slideIndex = (n - 1) * 8 + 1; // Adjust slide index based on dot clicked
+            showSlides(slideIndex);
         }
-    
+
         function showSlides(n) {
             var i;
             var slides = document.getElementsByClassName("mySlides");
@@ -468,7 +459,10 @@
                 dots[i].className = dots[i].className.replace(" active", "");
             }
             slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
+            
+            // Update dot active state based on the slideIndex
+            var activeDotIndex = Math.floor((slideIndex - 1) / 8);
+            dots[activeDotIndex].className += " active";
             
             // Set timeout for automatic slideshow
             slideTimer = setTimeout(function() {
